@@ -30,7 +30,7 @@ public class AbstractFactoryHelloWorld {
         }
         
         Printer printer = factory.createPrinter();
-        printer.print("Hello World!");
+        printer.print("Hello World!!");
     }
     
 }
