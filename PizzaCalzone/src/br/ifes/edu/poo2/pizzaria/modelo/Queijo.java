@@ -4,12 +4,16 @@
  * and open the template in the editor.
  */
 
-package pizzacalzone;
+package br.ifes.edu.poo2.pizzaria.modelo;
 
 /**
  *
  * @author Renan
  */
-public interface Presunto {
+public class Queijo {
+    
+    public String toString(){
+        return "Queijo";
+    }
     
 }

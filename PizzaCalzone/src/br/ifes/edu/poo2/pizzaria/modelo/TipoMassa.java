@@ -4,12 +4,12 @@
  * and open the template in the editor.
  */
 
-package pizzacalzone;
+package br.ifes.edu.poo2.pizzaria.modelo;
 
 /**
  *
  * @author Renan
  */
-public class CalzonePresunto {
-    
+public enum TipoMassa {
+    PIZZA, CALZONE
 }

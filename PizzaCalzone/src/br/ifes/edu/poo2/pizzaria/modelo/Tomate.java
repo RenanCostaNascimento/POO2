@@ -4,19 +4,15 @@
  * and open the template in the editor.
  */
 
-package pizzacalzone;
+package br.ifes.edu.poo2.pizzaria.modelo;
 
 /**
  *
  * @author Renan
  */
-public class PizzaCalzone {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
+public class Tomate {
     
+    public String toString(){
+        return "Tomate";
+    }
 }
