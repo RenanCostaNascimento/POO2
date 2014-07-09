@@ -8,7 +8,7 @@ package padraostate;
  *
  * @author 20121bsi0252
  */
-public class EstadoSemMoeda implements EstadoMaquinaGoma {
+public class EstadoSemMoeda extends EstadoMaquinaGomaAbstrata {
 
     private MaquinaGoma maquinaGoma;
     private static final String SEM_GOMA = "A máquina está sem gomas, aqui está sua moeda de volta";
@@ -30,7 +30,9 @@ public class EstadoSemMoeda implements EstadoMaquinaGoma {
     }
 
     @Override
-    public void ejetarMoeda(){}
+    public void ejetarMoeda(){
+        System.out.println("A máquina não tem moeda!");
+    }
 
     @Override
     public void proximoEstado() {
@@ -38,5 +40,12 @@ public class EstadoSemMoeda implements EstadoMaquinaGoma {
     }
 
     @Override
-    public void ejetarGoma(){}
+    public void ejetarGoma(){
+        System.out.println("Se você quer uma goma, me dê uma moeda!");
+    }
+
+    @Override
+    public String toString() {
+        return "Sem moeda";
+    }
 }

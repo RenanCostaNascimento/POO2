@@ -14,11 +14,8 @@ public interface EstadoMaquinaGoma {
     
     public void inserirMoeda(int valorMoeda);
     
-    public void ejetarMoeda();
-    
-    public void proximoEstado();
-    
-    public void ejetarGoma();
+    @Override
+    public String toString();
 }
 
 

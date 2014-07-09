@@ -8,7 +8,7 @@ package padraostate;
  *
  * @author 20121bsi0252
  */
-public class EstadoGomaVendida implements EstadoMaquinaGoma{
+public class EstadoGomaVendida extends EstadoMaquinaGomaAbstrata{
     private MaquinaGoma maquinaGoma;
     
     public EstadoGomaVendida(MaquinaGoma maquinaGoma){
@@ -16,28 +16,37 @@ public class EstadoGomaVendida implements EstadoMaquinaGoma{
     }    
 
     @Override
-    public void puxarAlavanca() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void puxarAlavanca(){
+        ejetarGoma();
     }
 
     @Override
-    public void inserirMoeda(int valorMoeda) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void inserirMoeda(int valorMoeda){
+        System.out.println("Pegue a sua goma primeiro!");
     }
 
     @Override
-    public void ejetarMoeda() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    public void ejetarMoeda() {}
 
     @Override
     public void proximoEstado() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(maquinaGoma.getQuantidadeGomas() > 0){
+            maquinaGoma.setEstadoAtual(maquinaGoma.getEstadoSemMoeda());
+        }else{
+            maquinaGoma.setEstadoAtual(maquinaGoma.getEstadoSemGoma());
+        }
     }
 
     @Override
-    public void ejetarGoma() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void ejetarGoma(){
+        System.out.println("Aqui está sua goma!");
+        maquinaGoma.setQuantidadeGomas(maquinaGoma.getQuantidadeGomas()-1);
+        maquinaGoma.setSaldoMoedas(0);
+        proximoEstado();
+    }
+    
+    public String toString(){
+        return "GomaVendida";
     }
     
 }

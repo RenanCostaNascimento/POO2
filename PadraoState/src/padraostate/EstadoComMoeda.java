@@ -8,7 +8,7 @@ package padraostate;
  *
  * @author 20121bsi0252
  */
-public class EstadoComMoeda implements EstadoMaquinaGoma{
+public class EstadoComMoeda extends EstadoMaquinaGomaAbstrata{
     private MaquinaGoma maquinaGoma;
     
     public EstadoComMoeda(MaquinaGoma maquinaGoma){
@@ -25,7 +25,9 @@ public class EstadoComMoeda implements EstadoMaquinaGoma{
     }
 
     @Override
-    public void inserirMoeda(int valorMoeda){}
+    public void inserirMoeda(int valorMoeda){
+        System.out.println("Essa máquina só aceita uma moeda por vez.");
+    }
 
     @Override
     public void ejetarMoeda() {
@@ -37,13 +39,20 @@ public class EstadoComMoeda implements EstadoMaquinaGoma{
     @Override
     public void proximoEstado() {
         if(maquinaGoma.getSaldoMoedas() == 0){
-            maquinaGoma.setEstadoAtual(maquinaGoma.getEstadoSemGoma());
+            maquinaGoma.setEstadoAtual(maquinaGoma.getEstadoSemMoeda());
         }else{
             maquinaGoma.setEstadoAtual(maquinaGoma.getEstadoGomaVendida());
         }
     }
 
     @Override
-    public void ejetarGoma(){}
+    public void ejetarGoma(){
+        System.out.println("Se você quer uma goma, puxe a alavanca!");
+    }
+    
+    @Override
+    public String toString(){
+        return "Com moeda.";
+    }
     
 }

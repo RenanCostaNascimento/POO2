@@ -8,7 +8,7 @@ package padraostate;
  *
  * @author 20121bsi0252
  */
-public class EstadoSemGoma implements EstadoMaquinaGoma{
+public class EstadoSemGoma extends EstadoMaquinaGomaAbstrata{
     private MaquinaGoma maquinaGoma;
     
     public EstadoSemGoma(MaquinaGoma maquinaGoma){
@@ -17,27 +17,31 @@ public class EstadoSemGoma implements EstadoMaquinaGoma{
     
     @Override
     public void puxarAlavanca() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Acabaram as gomas!");
     }
 
     @Override
     public void inserirMoeda(int valorMoeda) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Acabaram as gomas!");
+        ejetarMoeda();
     }
 
     @Override
     public void ejetarMoeda() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Aqui está sua moeda de volta.");
     }
 
     @Override
-    public void proximoEstado() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    public void proximoEstado() {}
 
     @Override
     public void ejetarGoma() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Acabaram as gomas!");
+    }
+
+    @Override
+    public String toString() {
+        return "Sem goma.";
     }
     
 }

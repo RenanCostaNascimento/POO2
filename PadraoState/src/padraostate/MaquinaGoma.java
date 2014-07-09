@@ -23,6 +23,7 @@ public class MaquinaGoma {
         estadoComMoeda = new EstadoComMoeda(this);
         estadoGomaVendida = new EstadoGomaVendida(this);
         estadoSemGoma = new EstadoSemGoma(this);
+        quantidadeGomas = 2;
     }
     
     public void setEstadoAtual(EstadoMaquinaGoma estadoAtual) {
