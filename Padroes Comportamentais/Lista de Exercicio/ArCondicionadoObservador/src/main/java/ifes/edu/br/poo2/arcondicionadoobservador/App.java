@@ -1,4 +1,4 @@
-package com.mycompany.arcondicionadoobservador;
+package ifes.edu.br.poo2.arcondicionadoobservador;
 
 /**
  * Hello world!
