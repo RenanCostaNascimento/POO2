@@ -11,5 +11,4 @@ package ifes.edu.br.poo2.arcondicionadoobservador;
 public interface Observado {
     public void notificarObservadores();
     public void adicionarObservador(Observador observador);
-    public void removerObservador(Observador observador);
 }

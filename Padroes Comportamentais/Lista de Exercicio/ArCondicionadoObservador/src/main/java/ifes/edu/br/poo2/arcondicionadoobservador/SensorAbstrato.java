@@ -11,15 +11,21 @@ import java.util.List;
  *
  * @author 20121BSI0252
  */
-public abstract class SensorAbstrato implements Observado{
-    
-    private List<Observador> arCondicionado;
-    
-    public SensorAbstrato(){
-        arCondicionado = new ArrayList<ArCondicionado>();
+public abstract class SensorAbstrato implements Observado {
+
+    private List<Observador> aresCondicionados;
+
+    public SensorAbstrato() {
+        aresCondicionados = new ArrayList<Observador>();
     }
-    
-    public void adicionarObservador(Observador observador){
-        this.arCondicionado.add(observador);
+
+    public void adicionarObservador(Observador arCondicionado) {
+        this.aresCondicionados.add(arCondicionado);
+    }
+
+    public void notificarObservadores() {
+        for (Observador arCondicionado : aresCondicionados) {
+            arCondicionado.atualizar();
+        }
     }
 }

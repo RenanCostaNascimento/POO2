@@ -4,12 +4,21 @@
  */
 package ifes.edu.br.poo2.arcondicionadoobservador;
 
+import lombok.Getter;
+
 /**
  *
  * @author 20121BSI0252
  */
-public class SensorTemperatura extends SensorAbstrato{
+@Getter
+public class SensorTemperatura extends SensorAbstrato {
+
     private double temperatura;
 
+    public void setTemperatura(double temperatura) {
+        this.temperatura = temperatura;
+        notificarObservadores();
+    }
 
+    
 }

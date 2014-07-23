@@ -4,12 +4,20 @@
  */
 package ifes.edu.br.poo2.arcondicionadoobservador;
 
+import lombok.Getter;
+
 /**
  *
  * @author 20121BSI0252
  */
-public class SensorPessoa extends SensorAbstrato{
+@Getter
+public class SensorPessoa extends SensorAbstrato {
+
     private int quantidadePessoa;
 
-   
+    public void setQuantidadePessoa(int quantidadePessoa) {
+        this.quantidadePessoa = quantidadePessoa;
+        notificarObservadores();
+    }
+
 }
