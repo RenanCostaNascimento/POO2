@@ -11,27 +11,27 @@ package ifes.edu.br.poo2.padraofabricaabstrata;
  * @author Renan
  */
 public class Main {
-    public static void main(String args[]){
-        FabricaAbstrata fabrica = ProdutorFabrica.criarFabrica("cor");
+    public static void main(String args[]){       
+        FabricaCor fabricaCor = ProdutorFabrica.criarFabricaCor();
         
-        Cor cor = fabrica.criarCor("vermelho");
+        Cor cor = fabricaCor.criarCor("vermelho");
         cor.pintar();
         
-        cor = fabrica.criarCor("azul");
+        cor = fabricaCor.criarCor("azul");
         cor.pintar();
         
-        cor = fabrica.criarCor("verde");
+        cor = fabricaCor.criarCor("verde");
         cor.pintar();
         
-        fabrica = ProdutorFabrica.criarFabrica("forma");
+        FabricaForma fabricaForma = ProdutorFabrica.criarFabricaForma();
         
-        Forma forma = fabrica.criarForma("retangulo");
+        Forma forma = fabricaForma.criarForma("retangulo");
         forma.desenhar();
         
-        forma = fabrica.criarForma("circulo");
+        forma = fabricaForma.criarForma("circulo");
         forma.desenhar();
         
-        forma = fabrica.criarForma("triangulo");
+        forma = fabricaForma.criarForma("triangulo");
         forma.desenhar();
     }
 }

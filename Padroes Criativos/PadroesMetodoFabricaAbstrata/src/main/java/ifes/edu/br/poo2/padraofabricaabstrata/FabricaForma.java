@@ -9,9 +9,8 @@ package ifes.edu.br.poo2.padraofabricaabstrata;
  *
  * @author Renan
  */
-public class FabricaForma extends FabricaAbstrata {
+public class FabricaForma {
 
-    @Override
     public Forma criarForma(String forma) {
         if (forma.equalsIgnoreCase("retangulo")) {
             return new Retangulo();
@@ -22,11 +21,6 @@ public class FabricaForma extends FabricaAbstrata {
                 return new Triangulo();
             }
         }
-    }
-
-    @Override
-    public Cor criarCor(String cor) {
-        return null;
     }
 
 }

@@ -9,14 +9,8 @@ package ifes.edu.br.poo2.padraofabricaabstrata;
  *
  * @author Renan
  */
-public class FabricaCor extends FabricaAbstrata {
+public class FabricaCor {
 
-    @Override
-    public Forma criarForma(String forma) {
-        return null;
-    }
-
-    @Override
     public Cor criarCor(String cor) {
         if (cor.equalsIgnoreCase("vermelho")) {
             return new Vermelho();

@@ -11,11 +11,11 @@ package ifes.edu.br.poo2.padraofabricaabstrata;
  * @author Renan
  */
 public class ProdutorFabrica {
-    public static FabricaAbstrata criarFabrica(String fabrica){
-        if(fabrica.equalsIgnoreCase("forma")){
-            return new FabricaForma();
-        }else{
-            return new FabricaCor();
-        }
+    public static FabricaForma criarFabricaForma(){
+        return new FabricaForma();
+    }
+    
+    public static FabricaCor criarFabricaCor(){
+        return new FabricaCor();
     }
 }
